@@ -1,27 +1,276 @@
-<!DOCTYPE html>
-<html>
+# Minimal Stylish Portfolio Website
 
+Save this as `index.html` in your GitHub repository.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Ashwin Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwin K K | Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
+
+        header{
+            padding:60px 10%;
+            text-align:center;
+            background:linear-gradient(135deg,#1e293b,#0f172a);
+        }
+
+        header h1{
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+        header p{
+            color:#cbd5e1;
+            max-width:800px;
+            margin:auto;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            padding:20px;
+            background:#111827;
+            position:sticky;
+            top:0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        section{
+            padding:60px 10%;
+        }
+
+        h2{
+            margin-bottom:25px;
+            font-size:32px;
+            color:#38bdf8;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:15px;
+            margin-bottom:25px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h3{
+            margin-bottom:10px;
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+        }
+
+        .skill{
+            background:#2563eb;
+            padding:10px 18px;
+            border-radius:30px;
+        }
+
+        .resume-btn{
+            display:inline-block;
+            padding:14px 28px;
+            background:#38bdf8;
+            color:black;
+            font-weight:bold;
+            border-radius:10px;
+            text-decoration:none;
+            margin-top:20px;
+        }
+
+        .resume-btn:hover{
+            background:white;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#111827;
+            color:#94a3b8;
+        }
+
+        .project-files a{
+            display:inline-block;
+            margin-top:10px;
+            margin-right:10px;
+            color:#38bdf8;
+            text-decoration:none;
+        }
+
+        .project-files a:hover{
+            text-decoration:underline;
+        }
+
+        @media(max-width:768px){
+            header h1{
+                font-size:36px;
+            }
+
+            nav{
+                flex-wrap:wrap;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Ashwin K K</h1>
+    <header>
+        <h1>Ashwin K K</h1>
+        <h3>Electronics and Communication Engineer</h3>
 
-<p>Embedded Systems and Robotics Developer</p>
+        <p>
+            Electronics and Communication Engineer with hands-on knowledge in embedded systems,
+            IoT, and wireless communication technologies. Proficient in Embedded C, ESP32,
+            Arduino, PCB design, soldering, and electronic circuit testing.
+        </p>
 
-<h2>Projects</h2>
+        <a href="resume.pdf" download class="resume-btn">
+            Download Resume
+        </a>
+    </header>
 
-<h3>Smart Trash Bin</h3>
-<p>AI based autonomous smart trash bin.</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<h3>LoRa Disaster Rover</h3>
-<p>GPS based autonomous rescue rover.</p>
+    <section id="about">
+        <h2>About Me</h2>
 
-<h2>Resume</h2>
+        <div class="card">
+            <p>
+                I am passionate about Embedded Systems, Robotics, IoT, PCB Design,
+                Wireless Communication, and Automation technologies.
+                I enjoy building innovative engineering solutions using ESP32,
+                Arduino, LoRa, Sensors, and AI-based systems.
+            </p>
+        </div>
+    </section>
 
-<a href="resume.pdf">Download Resume</a>
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Embedded C</div>
+            <div class="skill">ESP32</div>
+            <div class="skill">Arduino</div>
+            <div class="skill">PCB Design</div>
+            <div class="skill">UART</div>
+            <div class="skill">SPI</div>
+            <div class="skill">I2C</div>
+            <div class="skill">KiCad</div>
+            <div class="skill">MPLAB</div>
+            <div class="skill">IoT</div>
+            <div class="skill">LoRa</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>LoRa-based V2X Communication System</h3>
+
+            <p>
+                Developed a V2X communication prototype using ESP32,
+                Arduino Nano, and LoRa modules for traffic safety applications.
+            </p>
+
+            <div class="project-files">
+                <a href="#">Project Report</a>
+                <a href="#">Project Images</a>
+                <a href="#">Source Code</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Blackbox System for Emergency Response</h3>
+
+            <p>
+                Developed a vehicle SOS prototype system for accident detection,
+                GPS tracking, and emergency response alerts.
+            </p>
+
+            <div class="project-files">
+                <a href="#">Project Report</a>
+                <a href="#">Circuit Diagram</a>
+                <a href="#">Images</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Vision-Based Intelligent Automation System</h3>
+
+            <p>
+                Developed a YOLO-based automation system for face detection,
+                automatic lighting control, and energy efficiency monitoring.
+            </p>
+
+            <div class="project-files">
+                <a href="#">Project Files</a>
+                <a href="#">Demo Video</a>
+                <a href="#">Images</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="card">
+            <p><strong>Email:</strong> ashwinkkofficial@gmail.com</p>
+            <p><strong>Phone:</strong> 9037674613</p>
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/ashwin-k-k"
+                   style="color:#38bdf8;">
+                   linkedin.com/in/ashwin-k-k
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ashwin K K | Portfolio Website</p>
+    </footer>
 
 </body>
 </html>
+```
+
+Resume details used from uploaded resume file. fileciteturn0file0L1-L31
