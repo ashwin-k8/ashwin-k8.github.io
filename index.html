@@ -7,12 +7,17 @@
     <title>Ashwin K K | Portfolio</title>
 
     <style>
-       .features-box{
-display:none;
+.features-box{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:all 0.5s ease;
 }
 
 .project-card:hover .features-box{
-display:block;
+    max-height:300px;
+    opacity:1;
+    margin-top:15px;
 }
 
 .project-card{
@@ -264,11 +269,11 @@ display:block;
     <p><b>FEATURES:</b></p>
 
    <ul>
-<li>Overcharge protection</li>
-<li>Overdischarge protection</li>
-<li>Short circuit protection</li>
-<li>Current monitoring</li>
-<li>I2C monitoring support</li>
+<li>Overcharge protection — cuts off at 4.2V per cell via CHG MOSFET</li>
+<li>Overdischarge protection — cuts off at 2.8V per cell via DSG MOSFET</li>
+<li>Short circuit and overcurrent protection via 10 mΩ shunt resistor on SRP/SRN pins</li>
+<li>Dual LED indicator — red while charging, green when fully charged</li>
+<li>I2C interface (SDA/SCL) for optional cell voltage monitoring</li>
 <li>Dual LED indication</li>
 </ul>
 
