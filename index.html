@@ -241,22 +241,17 @@
             <p>
                 A compact, fully-featured battery management system designed for 3-cell lithium-ion packs. 
                 Built around the Texas Instruments BQ76920 IC, this module provides complete protection against overcharge,
-                overdischarge, overcurrent, and short-circuit conditions. 
+                overdischarge, overcurrent, and short-circuit conditions.
+                Features:
+                Overcharge protection — cuts off at 4.2V per cell via CHG MOSFET.
+                Overdischarge protection — cuts off at 2.8V per cell via DSG MOSFET.
+                Short circuit and overcurrent protection via 10 mΩ shunt resistor on SRP/SRN pins.
+                Dual LED indicator — red while charging, green when fully charged.
+                I2C interface (SDA/SCL) for optional cell voltage monitoring.
             </p>
 
             <div class="project-files">
                 <a href="#">Project Report</a>
-                <a href="#" onclick="toggleFeatures()">Features</a>
-                <p id="features-box" style="display:none; margin-top:10px;">
-
-
-Overcharge protection — cuts off at 4.2V per cell via CHG MOSFET
-Overdischarge protection — cuts off at 2.8V per cell via DSG MOSFET
-Short circuit and overcurrent protection via 10 mΩ shunt resistor on SRP/SRN pins
-Dual LED indicator — red while charging, green when fully charged
-I2C interface (SDA/SCL) for optional cell voltage monitoring
-
-</p>
                 <a href="projects/bms-module/circuit.png">Circuit Diagram</a>
                   <span>Project Images:</span>
 
@@ -291,26 +286,7 @@ I2C interface (SDA/SCL) for optional cell voltage monitoring
     <footer>
         <p>© 2026 Ashwin K K | Portfolio Website</p>
     </footer>
-
-    <script>
-
-function toggleFeatures() {
-
-    var x = document.getElementById("features-box");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } 
     
-    else {
-        x.style.display = "none";
-    }
-}
-
-</script>
-
-    
-
 </body>
 </html>
 
