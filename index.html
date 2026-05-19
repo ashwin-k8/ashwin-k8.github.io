@@ -7,6 +7,15 @@
     <title>Ashwin K K | Portfolio</title>
 
     <style>
+        .features-box{
+    display:none;
+    margin-top:15px;
+    color:white;
+}
+
+.project-card:hover .features-box{
+    display:block;
+}
         *{
             margin:0;
             padding:0;
@@ -235,7 +244,7 @@
             </p>
         </div>
 
-        <div class="card">
+        <div class="project-card">
             <h3>SmartCell 3S BMS</h3>
 
             <p>
@@ -244,19 +253,21 @@
                 overdischarge, overcurrent, and short-circuit conditions.
                 
             </p>
-               <br>
+            <br>
+            <div class="features-box">
 
     <p><b>FEATURES:</b></p>
 
-    <p>• Overcharge protection — cuts off at 4.2V per cell via CHG MOSFET</p>
+   <ul>
+<li>Overcharge protection</li>
+<li>Overdischarge protection</li>
+<li>Short circuit protection</li>
+<li>Current monitoring</li>
+<li>I2C monitoring support</li>
+<li>Dual LED indication</li>
+</ul>
 
-    <p>• Overdischarge protection — cuts off at 2.8V per cell via DSG MOSFET</p>
-
-    <p>• hort circuit and overcurrent protection via 10 mΩ shunt resistor on SRP/SRN pins</p>
-
-    <p>• Dual LED indicator — red while charging, green when fully charged</p>
-
-    <p>• I2C interface (SDA/SCL) for optional cell voltage monitoring</p>
+</div>
 
             <div class="project-files">
                 <a href="#">Project Report</a>
